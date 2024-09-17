@@ -28,5 +28,13 @@ def sample():
     for i in result:
         print(f"{i[0]} --- {i[1]} --- {i[2]}")
 
+    result = ch_manager.command("ALTER TABLE python_sample_table UPDATE metric=55.55 where key=3000;")
+    print("Update data successfuly")
+
+    result = ch_manager.query("Select * from python_sample_table")
+    for i in result:
+        print(f"{i[0]} --- {i[1]} --- {i[2]}")
+
+
 if __name__ == '__main__':
     sample()
