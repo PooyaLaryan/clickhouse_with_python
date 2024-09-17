@@ -9,9 +9,9 @@ class clickhouse_manager:
         result = self.client.query(query)
         return result.result_rows
     
-    """ def query(self, query, parameters = None):
+    def query(self, query, parameters = None):
         result = self.client.query(query=query, parameters=parameters)
-        return result._result_rows """
+        return result.result_rows
     
     def command(self, command):
         return self.client.command(cmd=command)
